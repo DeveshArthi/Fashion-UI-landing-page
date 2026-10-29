@@ -24,7 +24,7 @@ const Nav = ({ theme, setTheme }) => {
             <div className="container">
                 <nav>
                     <Link to="/" className="nav_logo" onClick={closeMenu}>
-                    <h2>DANI Bee</h2>
+                        <h2>DANI Bee</h2>
                     </Link>
                     <div className='nav_actions'>
                         <ul
@@ -41,10 +41,13 @@ const Nav = ({ theme, setTheme }) => {
                     </div>
 
                     <div className="nav_controls">
-                        <PersonIcon />
-                        <SearchIcon />
-                        <FavoriteIcon />
-                        <ShoppingCartIcon />
+                        <div id="nav_icon"
+                           className={`nav_icon ${isOpen ? 'open' : ''}`}>
+                            <PersonIcon />
+                            <SearchIcon />
+                            <FavoriteIcon />
+                            <ShoppingCartIcon />
+                        </div>
                         <button
                             type="button"
                             className="theme_toggle"

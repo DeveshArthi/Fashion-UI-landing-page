@@ -53,8 +53,14 @@ button {
         background-color: #cc6f00;
         background-image: linear-gradient(360deg, #4d2a00 0%, #f9e6a8 25%, #cc6f00 50%, #4d2a00 99%, #cc6f00 100%);
         ;
-        box-shadow:1px 2px 4px #f4ba5e;
+        box-shadow: 1px 2px 4px #f4ba5e;
     }
+
+    @media (max-width: 768px) {
+        font-size: 8px;
+        padding: 8px;
+    }
+
 }
 
 .nav_wrapper {
@@ -66,6 +72,10 @@ button {
         font-weight: 400;
         font-size: 30px;
         // font-style: normal;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     .nav_items {
@@ -78,12 +88,6 @@ button {
                 color: var(--strong-text);
             }
         }
-    }
-
-    .nav_controls {
-        display: flex;
-        align-items: center;
-        gap: 12px;
     }
 
     .theme_toggle {
@@ -224,6 +228,24 @@ button {
         display: flex;
         align-items: center;
         gap: 12px;
+
+
+        .nav_icon{
+            display: flex;
+            align-items: center;
+            gap :12px;
+        }
+
+        
+          @media (max-width: 400px) {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            .nav_icon{
+                
+            }
+        }
     }
 
     .theme_toggle,
@@ -247,6 +269,15 @@ button {
         &:focus-visible {
             outline: 2px solid #f4ba5e;
             outline-offset: 3px;
+        }
+
+        @media (max-width: 400px) {
+            height: 30px;
+            width: 30px;
+
+            svg {
+                font-size: 20px;
+            }
         }
     }
 
@@ -338,10 +369,26 @@ button {
                     font-family: "Italianno", cursive;
                     font-weight: 400;
                 }
+
+                @media (max-width: 768px) {
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    span {
+                        font-size: 40px;
+                    }
+                }
             }
 
         }
+
+        @media (max-width: 768px) {
+            margin: auto;
+        }
     }
+
+
 }
 
 .slider_wrapper {
@@ -566,188 +613,7 @@ button {
     }
 }
 
-// .product_wrapper {
-//     width: 100%;
-//     padding: 100px 0;
-//     // background-color: #f5f2ed;
-//     color: var(--text);
-//     overflow: hidden;
 
-//     .container {
-//         width: 90%;
-//         max-width: 1440px;
-//         margin: auto;
-//     }
-
-//     .product_header {
-//         display: flex;
-//         align-items: end;
-//         justify-content: space-between;
-//         margin-bottom: 40px;
-
-//         span {
-//             font-size: 12px;
-//             font-weight: 500;
-//             letter-spacing: 3px;
-
-//         }
-
-//         h2 {
-//             font-size: clamp(32px, 4vw, 56px);
-//             font-weight: 400;
-//             font-family: Georgia, serif;
-//         }
-//     }
-
-//     .slider_arrows {
-//         display: flex;
-//         align-items: center;
-//         gap: 12px;
-
-//         button {
-//             width: 45px;
-//             height: 45px;
-//             border: 1px solid #aaa;
-//             border-radius: 50%;
-//             background: transparent;
-//             cursor: pointer;
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             transition: all 0.3s ease;
-
-//             svg {
-//                 font-size: 18px;
-//             }
-
-//             &:hover {
-//                 background: #1a1a1a;
-//                 color: #fff;
-//                 border-color: #1a1a1a;
-//             }
-//         }
-//     }
-
-//     .products_slider {
-//         display: flex;
-//         gap: 25px;
-//         overflow-x: auto;
-//         scroll-behavior: smooth;
-//         scrollbar-width: none;
-//         -ms-overflow-style: none;
-
-//         &::-webkit-scrollbar {
-//             display: none;
-//         }
-//     }
-
-//     .card_wrapper {
-//         flex: 0 0 calc((100% - 75px) / 4);
-//         min-width: 0;
-//         cursor: pointer;
-
-//         .card_img {
-//             width: 100%;
-//             aspect-ratio: 3 / 4;
-//             position: relative;
-//             overflow: hidden;
-//             background: #e8e3dd;
-
-//             img {
-//                 width: 100%;
-//                 height: 100%;
-//                 object-fit: cover;
-//                 transition: transform 0.6s ease;
-//             }
-
-//             span {
-//                 position: absolute;
-//                 top: 15px;
-//                 left: 15px;
-//                 background: #fff;
-//                 padding: 8px 14px;
-//                 font-size: 11px;
-//                 letter-spacing: 1px;
-//                 text-transform: uppercase;
-//                 color: #171717;
-//             }
-//         }
-
-//         &:hover {
-//             .card_img img {
-//                 transform: scale(1.06);
-//             }
-//         }
-
-//         .card_details {
-//             padding: 22px 5px;
-
-//             span {
-//                 font-size: 11px;
-//                 letter-spacing: 2px;
-//                 color: #777;
-//             }
-
-//             h3 {
-//                 font-size: 25px;
-//                 font-family: Georgia, serif;
-//                 font-weight: 400;
-//                 margin: 12px 0;
-//             }
-
-//             p {
-//                 font-size: 14px;
-//                 line-height: 1.7;
-//                 color: #666;
-//             }
-//         }
-//     }
-
-//     @media (max-width: 1024px) {
-//         .card_wrapper {
-//             flex-basis: calc((100% - 25px) / 2);
-//         }
-//     }
-
-//     @media (max-width: 600px) {
-//         padding: 60px 0;
-
-//         .container {
-//             width: 92%;
-//         }
-
-//         .product_header {
-//             h2 {
-//                 font-size: 32px;
-//             }
-//         }
-
-//         .slider_arrows {
-//             button {
-//                 width: 36px;
-//                 height: 36px;
-
-//                 svg {
-//                     font-size: 15px;
-//                 }
-//             }
-//         }
-
-//         .products_slider {
-//             gap: 15px;
-//         }
-
-//         .card_wrapper {
-//             flex-basis: 85%;
-
-//             .card_details {
-//                 h3 {
-//                     font-size: 22px;
-//                 }
-//             }
-//         }
-//     }
-// }
 
 .about_wrapper {
     width: 100%;
@@ -798,8 +664,21 @@ button {
                     font-weight: 400;
 
                 }
+
+
             }
         }
+
+        @media (max-width: 780px) {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
     }
 }
 
@@ -859,11 +738,26 @@ button {
             // Tablet
             @media (max-width: 1024px) {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                .discover_list {
+                    &:nth-child(2) {
+                        border-right: none;
+                    }
+                }
             }
 
             // Mobile
             @media (max-width: 600px) {
                 grid-template-columns: 1fr;
+
+                .discover_list {
+
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        border-right: none;
+                    }
+                }
             }
         }
 
@@ -980,6 +874,16 @@ button {
                 font-weight: 400;
             }
 
+            @media (max-width: 500px) {
+                h2 {
+                    font-size: 50px;
+                }
+
+                span {
+                    font-size: 50px;
+                }
+            }
+
         }
     }
 }
@@ -1026,8 +930,6 @@ button {
                     flex-direction: column;
 
 
-
-
                     li {
                         list-style-type: none;
                         line-height: 2rem;
@@ -1046,6 +948,16 @@ button {
                         padding-bottom: 15px;
                         font-weight: 700;
                         letter-spacing: 0.2rem;
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+
+                @media (max-width: 500px) {
+                    ul li h2 {
+                        font-size: 20px;
                     }
                 }
             }
